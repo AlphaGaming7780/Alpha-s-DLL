@@ -4,6 +4,7 @@
 This repository is **archived**. The project has not been updated in many years, and I cannot guarantee that the DLL included here is the latest version. It’s a build I recovered from an old USB drive, so treat it as a historical snapshot rather than an authoritative release.
 
 Repository link: https://github.com/AlphaGaming7780/Alpha-s-DLL
+Steam mod page: https://steamcommunity.com/sharedfiles/filedetails/?id=2849372066
 
 ---
 
