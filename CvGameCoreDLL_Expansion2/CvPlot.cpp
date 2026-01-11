@@ -2337,6 +2337,9 @@ bool CvPlot::canBuild(BuildTypes eBuild, PlayerTypes ePlayer, bool bTestVisible,
 					{//only buildable in own culture
 						return false;
 					}
+					else if(GC.getImprovementInfo(eImprovement)->IsFriendlyTerritory() && isOwned() && isFriendlyTerritory(ePlayer)){
+						return true;
+					}
 				}
 			}
 		}

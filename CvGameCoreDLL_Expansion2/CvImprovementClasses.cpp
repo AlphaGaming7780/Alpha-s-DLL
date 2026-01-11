@@ -109,6 +109,7 @@ CvImprovementEntry::CvImprovementEntry(void):
 	m_bAdjacentLuxury(false),
 	m_bAllowsWalkWater(false),
 	m_bAllowsSailLand(false),
+	m_bIsFriendlyTerritory(false),
 	m_bMakesPassable(false),
 	m_bCreatedByGreatPerson(false),
 	m_bSpecificCivRequired(false),
@@ -233,6 +234,7 @@ bool CvImprovementEntry::CacheResults(Database::Results& kResults, CvDatabaseUti
 	m_bAdjacentLuxury = kResults.GetBool("AdjacentLuxury");
 	m_bAllowsWalkWater = kResults.GetBool("AllowsWalkWater");
 	m_bAllowsSailLand = kResults.GetBool("AllowsSailLand");
+	m_bIsFriendlyTerritory = kResults.GetBool("IsFriendlyTerritory");
 	m_bMakesPassable = kResults.GetBool("MakesPassable");
 	m_bCreatedByGreatPerson = kResults.GetBool("CreatedByGreatPerson");
 	m_bSpecificCivRequired = kResults.GetBool("SpecificCivRequired");
@@ -758,6 +760,11 @@ bool CvImprovementEntry::IsMakesPassable() const
 bool CvImprovementEntry::IsAllowsSailLand() const
 {
 	return m_bAllowsSailLand;
+}
+
+bool CvImprovementEntry::IsFriendlyTerritory() const
+{
+	return m_bIsFriendlyTerritory;
 }
 
 /// Does this improvement need to be built inside or adjacent to a civ's borders?

@@ -1202,7 +1202,7 @@ int PathValid(CvAStarNode* parent, CvAStarNode* node, int data, const void* poin
 	CvPathNodeCacheData& kToNodeCacheData = node->m_kCostCacheData;
 	kToNodeCacheData.bPlotVisibleToTeam = pToPlot->isVisible(eUnitTeam);
 	kToNodeCacheData.iNumFriendlyUnitsOfType = pToPlot->getNumFriendlyUnitsOfType(pUnit);
-	kToNodeCacheData.bIsMountain = pToPlot->isMountain();
+	kToNodeCacheData.bIsMountain = (pToPlot->isMountain() && !pToPlot->IsAllowsWalkWater()); //Alpha Gaming : EDIT
 	kToNodeCacheData.bIsWater = (pToPlot->isWater() && !pToPlot->IsAllowsWalkWater());
 	kToNodeCacheData.bCanEnterTerrain = pUnit->canEnterTerrain(*pToPlot, CvUnit::MOVEFLAG_PRETEND_CORRECT_EMBARK_STATE);
 	kToNodeCacheData.bIsRevealedToTeam = pToPlot->isRevealed(eUnitTeam);
